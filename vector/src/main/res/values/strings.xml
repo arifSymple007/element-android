@@ -3779,4 +3779,7 @@
     <string name="tooltip_attachment_poll">Create poll</string>
     <string name="tooltip_attachment_location">Share location</string>
 
+    <string name="room_message_notify_everyone">Notify the whole room</string>
+    <string name="room_message_autocomplete_users">Users</string>
+    <string name="room_message_autocomplete_notification">Room notification</string>
 </resources>
