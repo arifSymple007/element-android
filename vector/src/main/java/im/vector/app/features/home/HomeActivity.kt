@@ -483,14 +483,14 @@ class HomeActivity :
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
-            R.id.menu_home_suggestion          -> {
-                bugReporter.openBugReportScreen(this, ReportType.SUGGESTION)
-                return true
-            }
-            R.id.menu_home_report_bug          -> {
-                bugReporter.openBugReportScreen(this, ReportType.BUG_REPORT)
-                return true
-            }
+//            R.id.menu_home_suggestion          -> {
+//                bugReporter.openBugReportScreen(this, ReportType.SUGGESTION)
+//                return true
+//            }
+//            R.id.menu_home_report_bug          -> {
+//                bugReporter.openBugReportScreen(this, ReportType.BUG_REPORT)
+//                return true
+//            }
             R.id.menu_home_init_sync_legacy    -> {
                 // Configure the SDK
                 initialSyncStrategy = InitialSyncStrategy.Legacy

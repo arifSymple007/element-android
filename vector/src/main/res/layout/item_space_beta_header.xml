@@ -39,6 +39,9 @@
         android:paddingBottom="8dp"
         android:text="@string/give_feedback"
         android:textColor="@color/vector_info_color"
-        app:drawableStartCompat="@drawable/ic_feedback" />
+        app:drawableStartCompat="@drawable/ic_feedback"
+                android:visibility="invisible"
+
+         />
 
 </LinearLayout>

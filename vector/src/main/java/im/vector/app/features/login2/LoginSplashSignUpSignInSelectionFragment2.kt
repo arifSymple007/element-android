@@ -50,7 +50,7 @@ class LoginSplashSignUpSignInSelectionFragment2 @Inject constructor(
         views.loginSignupSigninSignIn.setOnClickListener { signIn() }
 
         if (BuildConfig.DEBUG || vectorPreferences.developerMode()) {
-            views.loginSplashVersion.isVisible = true
+            views.loginSplashVersion.isVisible = false
             @SuppressLint("SetTextI18n")
             views.loginSplashVersion.text = "Version : ${BuildConfig.VERSION_NAME}\n" +
                     "Branch: ${BuildConfig.GIT_BRANCH_NAME}\n" +

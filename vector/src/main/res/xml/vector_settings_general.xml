@@ -51,23 +51,34 @@
 
     </im.vector.app.core.preference.VectorPreferenceCategory>
 
-    <im.vector.app.core.preference.VectorPreferenceCategory android:title="@string/settings_integrations">
+    <im.vector.app.core.preference.VectorPreferenceCategory android:title="@string/settings_integrations"
+            app:allowDividerAbove="false"
+        app:allowDividerBelow="false"
+        app:isPreferenceVisible="false"
+    
+    >
 
         <im.vector.app.core.preference.VectorPreference
             android:focusable="false"
             android:persistent="false"
-            android:summary="@string/settings_integrations_summary" />
+            android:summary="@string/settings_integrations_summary"
+               app:isPreferenceVisible="false"
+             />
 
         <im.vector.app.core.preference.VectorSwitchPreference
             android:key="SETTINGS_ALLOW_INTEGRATIONS_KEY"
             android:persistent="false"
-            android:title="@string/settings_integration_allow" />
+            android:title="@string/settings_integration_allow"
+               app:isPreferenceVisible="false"
+             />
 
         <im.vector.app.core.preference.VectorPreference
             android:dependency="SETTINGS_ALLOW_INTEGRATIONS_KEY"
             android:key="SETTINGS_INTEGRATION_MANAGER_UI_URL_KEY"
             android:persistent="false"
-            android:title="@string/settings_integration_manager" />
+            android:title="@string/settings_integration_manager" 
+               app:isPreferenceVisible="false"
+            />
 
     </im.vector.app.core.preference.VectorPreferenceCategory>
 

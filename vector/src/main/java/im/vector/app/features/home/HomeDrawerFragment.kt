@@ -96,18 +96,20 @@ class HomeDrawerFragment @Inject constructor(
             }
         }
 
-        views.homeDrawerInviteFriendButton.debouncedClicks {
-            session.permalinkService().createPermalink(sharedActionViewModel.session.myUserId)?.let { permalink ->
-                analyticsTracker.screen(MobileScreen(screenName = MobileScreen.ScreenName.InviteFriends))
-                val text = getString(R.string.invite_friends_text, permalink)
-
-                startSharePlainTextIntent(
-                        fragment = this,
-                        activityResultLauncher = null,
-                        chooserTitle = getString(R.string.invite_friends),
-                        text = text,
-                        extraTitle = getString(R.string.invite_friends_rich_title)
-                )
+         views.homeDrawerInviteFriendButton.debouncedClicks {
+            sharedActionViewModel.session.sessionParams.homeServerHost?.let {
+                session.permalinkService().createPermalink(it,false)?.let {
+                    
+                     permalink ->
+                    val text = getString(R.string.invite_friends_text , permalink)
+                    startSharePlainTextIntent(
+                            fragment = this,
+                            activityResultLauncher = null,
+                            chooserTitle = getString(R.string.invite_friends),
+                            text = text,
+                            extraTitle = getString(R.string.invite_friends_rich_title)
+                    )
+                }
             }
         }
 

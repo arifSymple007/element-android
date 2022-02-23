@@ -100,7 +100,11 @@ class LoginSignUpSignInSelectionFragment @Inject constructor() : AbstractSSOLogi
                 views.loginSignupSigninSignIn.isVisible = false
             }
             else             -> {
+
+
+
                 views.loginSignupSigninSubmit.text = getString(R.string.login_signup)
+                views.loginSignupSigninSubmit.isVisible = false
                 views.loginSignupSigninSignIn.isVisible = true
             }
         }
@@ -120,6 +124,7 @@ class LoginSignUpSignInSelectionFragment @Inject constructor() : AbstractSSOLogi
     }
 
     private fun signIn() {
+        //todo arif
         loginViewModel.handle(LoginAction.UpdateSignMode(SignMode.SignIn))
     }
 

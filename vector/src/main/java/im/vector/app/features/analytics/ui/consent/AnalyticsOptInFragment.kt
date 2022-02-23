@@ -43,9 +43,13 @@ class AnalyticsOptInFragment @Inject constructor() :
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+
+        //Todo arif
+        viewModel.handle(AnalyticsConsentViewActions.SetUserConsent(userConsent = false))
+
         super.onViewCreated(view, savedInstanceState)
-        setupLink()
-        setupListeners()
+   //     setupLink()
+   //     setupListeners()
     }
 
     private fun setupListeners() {

@@ -681,6 +681,7 @@ class LoginViewModel @AssistedInject constructor(
                         ?.let {
                             reAuthHelper.data = action.password
                             onSessionCreated(it)
+
                         }
             }
         }

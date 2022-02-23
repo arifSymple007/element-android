@@ -58,7 +58,7 @@ class LoginSplashFragment @Inject constructor(
         views.loginSplashSubmit.debouncedClicks { getStarted() }
 
         if (BuildConfig.DEBUG || vectorPreferences.developerMode()) {
-            views.loginSplashVersion.isVisible = true
+            views.loginSplashVersion.isVisible = false
             @SuppressLint("SetTextI18n")
             views.loginSplashVersion.text = "Version : ${BuildConfig.VERSION_NAME}\n" +
                     "Branch: ${BuildConfig.GIT_BRANCH_NAME}\n" +
@@ -68,7 +68,9 @@ class LoginSplashFragment @Inject constructor(
     }
 
     private fun getStarted() {
-        loginViewModel.handle(LoginAction.OnGetStarted(resetLoginConfig = false))
+//        loginViewModel.handle(LoginAction.OnGetStarted(resetLoginConfig = false))
+        loginViewModel.handle(LoginAction.UpdateServerType(ServerType.Other))
+
     }
 
     override fun resetViewModel() {
